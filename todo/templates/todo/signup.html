@@ -1,0 +1,21 @@
+{% extends 'todo/base.html' %} {% load static %}
+{% block title %}
+<title>TODO APP || Signup || Pramod Chaudhary</title>
+{% endblock title %}
+{% block content %}
+<div class="container pt-5">
+    <div class="col-lg-5 shadow p-0 mx-auto">
+        <div class="alert alert-primary">
+            <h2>Sign Up</h2>
+        </div>
+        <div class="p-4">
+            <form method="POST" action="/signup">
+                {% csrf_token %}
+                {{form.as_p}}
+                </br>
+                <input class="btn btn-primary" type="submit" value="Create Account">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
